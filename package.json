@@ -7,7 +7,7 @@
     "babel-node": "babel-node --presets=@babel/preset-env",
     "dev": "nodemon --exec npm run babel-node ./index.js",
     "test": "jest --watch",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "ci:lint": "eslint .",
     "ci:test": "jest --ci"
   },
