@@ -1,8 +1,8 @@
 name: CI
 on: [push] #in what action that we want to run like (push,pr,merges)
 jobs:
-  eslint: 
-    name: Lint Code Base
+  standard-checks: 
+    name: Lint and Test
     runs-on: ubuntu-latest
 
     steps:
