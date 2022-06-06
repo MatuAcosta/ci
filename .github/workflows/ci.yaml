@@ -1,0 +1,16 @@
+name: CI
+on: [push] #in what action that we want to run like (push,pr,merges)
+jobs:
+  eslint: 
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Install packages
+        run: npm i 
+      
+      - name: Run ESlint
+        run: npm run lint 
