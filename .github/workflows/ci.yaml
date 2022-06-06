@@ -13,4 +13,7 @@ jobs:
         run: npm ci #npm ci instead of npm i
       
       - name: Run ESlint
-        run: npm run lint 
+        run: npm run ci:lint 
+
+      - name: run Tests
+        run: npm run ci:test #we dont want to use --watch in github so we pass ci instead of npm t

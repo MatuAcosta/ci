@@ -6,8 +6,10 @@
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
     "dev": "nodemon --exec npm run babel-node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "test": "jest --watch",
+    "lint": "eslint .",
+    "ci:lint": "eslint .",
+    "ci:test": "jest --ci"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
     "@babel/core": "^7.18.2",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.18.2",
+    "jest": "^28.1.0",
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
