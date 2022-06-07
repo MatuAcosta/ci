@@ -17,3 +17,18 @@ jobs:
 
       - name: run Tests
         run: npm run ci:test #we dont want to use --watch in github so we pass ci instead of npm t
+
+
+        #also I can use another job like for example Tests
+        #but npm ci or npm i its gonna take too much time, because we use a node module for each job
+        # the jobs works asyncronously so they work at the same time.
+  #tests: 
+  #  steps:
+  #    - name: Checkout code
+  #      uses: actions/checkout@v2
+  #    
+  #    - name: Install packages
+  #      run: npm ci #npm ci instead of npm i
+  #
+  #    - name: run Tests
+  #      run: npm run ci:test
