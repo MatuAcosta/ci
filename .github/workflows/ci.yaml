@@ -3,12 +3,13 @@ on: [push] #in what action that we want to run like (push,pr,merges)
 jobs:
   standard-checks: 
     name: Lint and Test
-    runs-on: windows-2016
+    runs-on: ubuntu-latest
 
     steps:
       - run: node -v
       - name: Checkout code
         uses: actions/checkout@v2
+        uses: actions/setup-node@v2
       
       - name: Install packages
         run: npm ci #npm ci instead of npm i
