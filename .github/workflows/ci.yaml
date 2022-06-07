@@ -21,6 +21,9 @@ jobs:
 
       - name: run Tests
         run: npm run ci:test #we dont want to use --watch in github so we pass ci instead of npm t
+      
+      - name: Bundle and output
+        run: npm run build
 
 
         #also I can use another job like for example Tests
